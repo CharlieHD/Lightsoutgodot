@@ -1,0 +1,93 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwrxhfwu1jyy6"]
+
+[ext_resource type="ArrayMesh" uid="uid://h4qprkygr070" path="res://KayKit_Prototype_Bits_1.0_FREE/KayKit_Prototype_Bits_1.0_FREE/Assets/obj/Floor.obj" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bmxeoy038425p" path="res://KayKit_Prototype_Bits_1.0_FREE/KayKit_Prototype_Bits_1.0_FREE/Assets/fbx/Wall.fbx" id="2_lquwl"]
+[ext_resource type="ArrayMesh" uid="uid://db5rak5sqb0vk" path="res://KayKit_Prototype_Bits_1.0_FREE/Models/OBJ format/crate-color.obj" id="3_7mycd"]
+[ext_resource type="ArrayMesh" uid="uid://dxrllr2xagrdj" path="res://KayKit_Prototype_Bits_1.0_FREE/Models/OBJ format/indicator-special-cross.obj" id="4_272bh"]
+
+[node name="Main" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor2" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor2"]
+transform = Transform3D(1, 8.48629e-05, -5.06244e-05, -8.48629e-05, 1, 3.46655e-05, 5.06244e-05, -3.46655e-05, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor3" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor2" type="MeshInstance3D" parent="Floor/Floor3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3/Floor2"]
+transform = Transform3D(1, 8.48629e-05, -5.06244e-05, -8.48629e-05, 1, 3.46655e-05, 5.06244e-05, -3.46655e-05, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor3" type="MeshInstance3D" parent="Floor/Floor3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3/Floor3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3/Floor3/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor2" type="MeshInstance3D" parent="Floor/Floor3/Floor3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Floor" type="MeshInstance3D" parent="Floor/Floor3/Floor3/Floor2"]
+transform = Transform3D(1, 8.48629e-05, -5.06244e-05, -8.48629e-05, 1, 3.46655e-05, 5.06244e-05, -3.46655e-05, 1, 4, 0, 0)
+mesh = ExtResource("1_1bvp3")
+
+[node name="Wall" parent="." instance=ExtResource("2_lquwl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 0, 7)
+
+[node name="Wall2" parent="Wall" instance=ExtResource("2_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Wall2" parent="Wall/Wall2" instance=ExtResource("2_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Wall2" parent="Wall/Wall2/Wall2" instance=ExtResource("2_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Wall2" parent="Wall/Wall2/Wall2/Wall2" instance=ExtResource("2_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Crate-color" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -7, 0.506529, 4)
+mesh = ExtResource("3_7mycd")
+
+[node name="Indicator-special-cross" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 8.06066, 0.50067, -3.09239)
+mesh = ExtResource("4_272bh")
